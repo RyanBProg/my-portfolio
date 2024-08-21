@@ -15,6 +15,9 @@ const config: Config = {
       backgroundImage: {
         "gradient-header": "var(--gradient-header)",
       },
+      screens: {
+        xs: "480px",
+      },
     },
   },
   plugins: [],
