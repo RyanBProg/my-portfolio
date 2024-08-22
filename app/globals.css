@@ -4,7 +4,7 @@
 
 :root {
   /* colors */
-  --bg-color: #121212;
+  --bg-color: rgb(18, 18, 18);
   --light-black: rgb(43, 41, 43);
 
   /* gradients */

@@ -5,6 +5,10 @@ import reactIcon from "../public/icons/atom.png";
 import cssIcon from "../public/icons/css.png";
 import nodeIcon from "../public/icons/node-js.png";
 import portrait from "../public/images/demo-portrait.png";
+import portfolio1 from "../public/images/shoe-junky.png";
+import portfolio2 from "../public/images/url-shorty.png";
+import portfolio3 from "../public/images/bookmarker.png";
+import portfolio4 from "../public/images/taste-oasis.png";
 import linkedinIcon from "../public/icons/linkedin.png";
 import instaIcon from "../public/icons/instagram.png";
 import webIcon from "../public/icons/web.png";
@@ -64,7 +68,7 @@ export default function Home() {
               className="absolute -bottom-[200px] left-0 scale-150"
             />
           </BentoLarge>
-          <BentoLarge className="bg-yellow-400 col-start-2 flex justify-center items-center gap-2 sm:gap-6">
+          <BentoLarge className="bg-yellow-400 col-start-2 flex justify-center items-center gap-2 sm:gap-6 lg:gap-3 xl:gap-6">
             <button className="bg-white/30 rounded-full shadow-lg transition-colors hover:bg-white/75">
               <Image src={githubIcon} alt="" />
             </button>
@@ -117,7 +121,6 @@ export default function Home() {
           </BentoLarge>
         </div>
       </section>
-
       <section className="grid grid-cols-12 grid-rows-2 lg:grid-rows-1 gap-4 h-[450px] lg:h-[250px] mt-4">
         <BentoLarge className="bg-white/10 col-span-12 lg:col-span-7 row-span-1 flex flex-col gap-6">
           <div className="flex justify-between">
@@ -127,10 +130,18 @@ export default function Home() {
             </button>
           </div>
           <div className="grid grid-cols-3 xs:grid-cols-4 grid-rows-1 flex-grow gap-4">
-            <div className="bg-amber-600 rounded-xl">f</div>
-            <div className="bg-slate-600 rounded-xl">f</div>
-            <div className="bg-green-600 rounded-xl">f</div>
-            <div className="bg-purple-600 rounded-xl hidden xs:block">f</div>
+            <div className="bg-amber-600 rounded-xl overflow-clip">
+              <Image src={portfolio1} alt="" className="object-cover h-full" />
+            </div>
+            <div className="bg-slate-600 rounded-xl overflow-clip">
+              <Image src={portfolio2} alt="" className="object-cover h-full" />
+            </div>
+            <div className="bg-green-600 rounded-xl overflow-clip">
+              <Image src={portfolio3} alt="" className="object-cover h-full" />
+            </div>
+            <div className="bg-purple-600 rounded-xl overflow-clip hidden xs:block">
+              <Image src={portfolio4} alt="" className="object-cover h-full" />
+            </div>
           </div>
         </BentoLarge>
         <BentoLarge className="bg-white/10 col-span-12 lg:col-span-5 row-span-1">
