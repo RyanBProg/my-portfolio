@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import airplaneIcon from "../public/icons/paper-airplane.png";
 import typescriptIcon from "../public/icons/typescript.png";
 import reactIcon from "../public/icons/atom.png";
@@ -17,7 +18,7 @@ import BentoLarge from "./components/BentoLarge";
 
 export default function Home() {
   return (
-    <main className="py-4 mb-20">
+    <main className="py-4">
       <section className="grid gap-4 grid-cols-1 lg:grid-cols-2">
         <div className="grid grid-cols-3 grid-rows-5 gap-4 h-[500px] xs:h-[450px]">
           <BentoLarge className="bg-white/10 col-span-3 row-span-3 relative flex flex-col justify-between items-end">
@@ -125,9 +126,11 @@ export default function Home() {
         <BentoLarge className="bg-white/10 col-span-12 lg:col-span-7 row-span-1 flex flex-col gap-6">
           <div className="flex justify-between">
             <h2 className="text-white font-bold text-3xl">Portfolio</h2>
-            <button className="text-white/80 font-normal text-xl transition-colors hover:text-white">
-              See More
-            </button>
+            <Link href="/portfolio">
+              <button className="text-white/80 font-normal text-xl transition-colors hover:text-white">
+                See More
+              </button>
+            </Link>
           </div>
           <div className="grid grid-cols-3 xs:grid-cols-4 grid-rows-1 flex-grow gap-4">
             <div className="bg-amber-600 rounded-xl overflow-clip">
@@ -147,9 +150,11 @@ export default function Home() {
         <BentoLarge className="bg-white/10 col-span-12 lg:col-span-5 row-span-1">
           <div className="flex justify-between mb-6">
             <h2 className="text-white font-bold text-3xl">About</h2>
-            <button className="text-white/80 font-normal text-xl transition-colors hover:text-white">
-              See More
-            </button>
+            <Link href="/about">
+              <button className="text-white/80 font-normal text-xl transition-colors hover:text-white">
+                See More
+              </button>
+            </Link>
           </div>
           <p className="text-white/80">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad vel

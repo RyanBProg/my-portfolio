@@ -64,7 +64,7 @@ export default function NavMenu() {
       <div
         className={`${
           menuOpen ? "block" : "hidden"
-        } absolute bg-black/50 -top-5 -right-5 h-[1000px] w-screen -z-10`}></div>
+        } fixed bg-black/75 top-0 right-0 bottom-0 w-screen -z-10`}></div>
       <nav
         ref={navRef}
         className={`${

@@ -6,6 +6,9 @@
   /* colors */
   --bg-color: rgb(18, 18, 18);
   --light-black: rgb(43, 41, 43);
+  --screen-xs: 480px;
+  --screen-sm: 640px;
+  --screen-lg: 1024px;
 
   /* gradients */
   --gradient-header: linear-gradient(
@@ -18,4 +21,24 @@
 body {
   padding: 20px;
   background-color: var(--bg-color);
+  min-height: 100vh;
+}
+
+@layer components {
+  .porfolioBento {
+    @apply grid gap-4;
+
+    grid-template-columns: 1fr;
+    grid-template-rows: fit-content fit-content fit-content;
+
+    @media (min-width: 768px) {
+      grid-template-columns: 1fr fit-content;
+      grid-template-rows: fit-content 1fr;
+    }
+
+    @media (min-width: 1024px) {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: fit-content fit-content;
+    }
+  }
 }
