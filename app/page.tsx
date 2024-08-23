@@ -21,7 +21,7 @@ export default function Home() {
     <main className="py-4">
       <section className="grid gap-4 grid-cols-1 lg:grid-cols-2">
         <div className="grid grid-cols-3 grid-rows-5 gap-4 h-[500px] xs:h-[450px]">
-          <BentoLarge className="bg-white/10 col-span-3 row-span-3 relative flex flex-col justify-between items-end">
+          <BentoLarge className="bentoSlide bg-white/10 col-span-3 row-span-3 relative flex flex-col justify-between items-end">
             <h1 className="text-white text-4xl xs:text-5xl font-bold w-full">
               Full-Stack Web <br />
               Developer
@@ -35,7 +35,7 @@ export default function Home() {
               />
             </button>
           </BentoLarge>
-          <BentoLarge className="row-span-2 flex justify-center items-center bg-teal-400">
+          <BentoLarge className="bentoSlide row-span-2 flex justify-center items-center bg-teal-400">
             <p className="text-center text-white text-sm xs:text-lg font-medium">
               <span className="block text-4xl xs:text-5xl font-bold mb-2">
                 3+
@@ -43,13 +43,13 @@ export default function Home() {
               Years Coding Experience
             </p>
           </BentoLarge>
-          <BentoLarge className="row-span-2 flex justify-center items-center bg-yellow-400">
+          <BentoLarge className="bentoSlide row-span-2 flex justify-center items-center bg-yellow-400">
             <p className="text-center text-black text-lg font-medium">
               <span className="block text-5xl font-bold mb-2">10+</span>Years in
               Engineering
             </p>
           </BentoLarge>
-          <BentoLarge className="row-span-2 flex justify-center items-center bg-blue-400">
+          <BentoLarge className="bentoSlide row-span-2 flex justify-center items-center bg-blue-400">
             <p className="text-center text-white text-lg font-medium">
               <span className="block text-5xl font-bold mb-2">15+</span>
               Projects Completed
@@ -57,19 +57,19 @@ export default function Home() {
           </BentoLarge>
         </div>
         <div className="grid grid-cols-2 grid-rows-5 gap-4 h-[500px] xs:h-[450px]">
-          <BentoLarge className="bg-white/10 col-span-2 flex items-center">
+          <BentoLarge className="bentoSlide bg-white/10 col-span-2 flex items-center">
             <p className="text-white text-2xl xs:text-4xl font-bold">
               &#128075; Ryan Bowler
             </p>
           </BentoLarge>
-          <BentoLarge className="bg-teal-400 row-start-2 row-span-4 col-start-1 relative overflow-clip">
+          <BentoLarge className="bentoSlide bg-teal-400 row-start-2 row-span-4 col-start-1 relative overflow-clip">
             <Image
               src={portrait}
               alt=""
               className="absolute -bottom-[200px] left-0 scale-150"
             />
           </BentoLarge>
-          <BentoLarge className="bg-yellow-400 col-start-2 flex justify-center items-center gap-2 sm:gap-6 lg:gap-3 xl:gap-6">
+          <BentoLarge className="bentoSlide bg-yellow-400 col-start-2 flex justify-center items-center gap-2 sm:gap-6 lg:gap-3 xl:gap-6">
             <button className="bg-white/30 rounded-full shadow-lg transition-colors hover:bg-white/75">
               <Image src={githubIcon} alt="" />
             </button>
@@ -83,8 +83,8 @@ export default function Home() {
               <Image src={instaIcon} alt="" />
             </button>
           </BentoLarge>
-          <BentoLarge className="bg-white/10 col-start-2 row-span-3 text-white">
-            <h2 className="text-2xl font-bold mb-4">Skills</h2>
+          <BentoLarge className="bentoSlide bg-white/10 col-start-2 row-span-3 text-white">
+            <h2 className="text-2xl font-bold mb-4">Core Skills</h2>
             <ul className="text-white/80 font-medium flex flex-col gap-3 text-[1.1rem]">
               <li>
                 <Image
@@ -123,7 +123,7 @@ export default function Home() {
         </div>
       </section>
       <section className="grid grid-cols-12 grid-rows-2 lg:grid-rows-1 gap-4 h-[450px] lg:h-[250px] mt-4">
-        <BentoLarge className="bg-white/10 col-span-12 lg:col-span-7 row-span-1 flex flex-col gap-6">
+        <BentoLarge className="bentoSlide bg-white/10 col-span-12 lg:col-span-7 row-span-1 flex flex-col gap-6">
           <div className="flex justify-between">
             <h2 className="text-white font-bold text-3xl">Portfolio</h2>
             <Link href="/portfolio">
@@ -147,7 +147,7 @@ export default function Home() {
             </div>
           </div>
         </BentoLarge>
-        <BentoLarge className="bg-white/10 col-span-12 lg:col-span-5 row-span-1">
+        <BentoLarge className="bentoSlide bg-white/10 col-span-12 lg:col-span-5 row-span-1">
           <div className="flex justify-between mb-6">
             <h2 className="text-white font-bold text-3xl">About</h2>
             <Link href="/about">
