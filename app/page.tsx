@@ -59,7 +59,7 @@ export default function Home() {
         <div className="grid grid-cols-2 grid-rows-5 gap-4 h-[500px] xs:h-[450px]">
           <BentoLarge className="bentoSlide bg-white/10 col-span-2 flex items-center">
             <p className="text-white text-2xl xs:text-4xl font-bold">
-              &#128075; Ryan Bowler
+              &#128075; Hi, I'm Ryan
             </p>
           </BentoLarge>
           <BentoLarge className="bentoSlide bg-teal-400 row-start-2 row-span-4 col-start-1 relative overflow-clip">
@@ -157,10 +157,10 @@ export default function Home() {
             </Link>
           </div>
           <p className="text-white/80">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad vel
-            quasi quis laboriosam magni fugiat debitis, adipisci voluptas,
-            quaerat saepe odio harum fuga earum nesciunt temporibus pariatur
-            ratione. Rem, esse.
+            I'm a passionate Full Stack Developer and professional problem
+            solver who loves to build things. I specialize in creating
+            responsive and scalable applications, driven by my curiosity and
+            commitment to delivering a solution.
           </p>
         </BentoLarge>
       </section>

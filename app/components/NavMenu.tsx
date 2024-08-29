@@ -58,35 +58,35 @@ export default function NavMenu() {
     <>
       <button
         onClick={() => setMenuOpen(true)}
-        className="bg-white/30 rounded-full p-4 shadow-lg ring-1 ring-black/5 h-fit transition-colors hover:bg-white/40">
+        className="bg-neutral-700 rounded-full p-4 h-fit transition-all hover:-translate-y-1 -z-10 hover:bg-neutral-600">
         <Image src={menuIcon} alt="" className="size-6" />
       </button>
       <div
         className={`${
           menuOpen ? "block" : "hidden"
-        } fixed bg-black/75 top-0 right-0 bottom-0 w-screen -z-10`}></div>
+        } fixed bg-black/95 top-0 right-0 bottom-0 w-screen -z-10`}></div>
       <nav
         ref={navRef}
         className={`${
           menuOpen ? "block" : "hidden"
-        } absolute w-full p-6 pt-24 rounded-3xl bg-gradient-header top-0 right-0`}>
+        } absolute w-full p-6 pt-24 rounded-3xl bg-grey-500 top-0 right-0`}>
         <button
           onClick={() => setMenuOpen(false)}
           ref={closeMenuBtn}
-          className="absolute top-3 right-3 bg-white/30 rounded-full p-4 shadow-lg ring-1 ring-black/5 h-fit transition-colors hover:bg-white/40">
+          className="absolute top-3 right-3 bg-neutral-700 rounded-full p-4 shadow-lg ring-1 ring-black/5 h-fit transition-all hover:-translate-y-1 hover:bg-neutral-600">
           <Image src={closeIcon} alt="" className="size-6" />
         </button>
-        <ul className="flex flex-col gap-4">
-          <li className="font-bold text-4xl text-right transition-colors text-teal-400 hover:text-white/75">
+        <ul className="flex flex-col gap-4 items-end">
+          <li className="font-bold text-4xl text-right transition-all hover:-translate-y-1 bg-teal-400 p-2 rounded-2xl w-fit hover:bg-teal-300">
             <Link href="/">Home</Link>
           </li>
-          <li className="font-bold text-4xl text-right transition-colors text-yellow-400 hover:text-white/75">
+          <li className="font-bold text-4xl text-right transition-all hover:-translate-y-1 bg-yellow-400 p-2 rounded-2xl w-fit hover:bg-yellow-300">
             <Link href="/about">About Me</Link>
           </li>
-          <li className="font-bold text-4xl text-right transition-colors text-red-400 hover:text-white/75">
+          <li className="font-bold text-4xl text-right transition-all hover:-translate-y-1 bg-red-400 p-2 rounded-2xl w-fit hover:bg-red-300">
             <Link href="/portfolio">Portfolio</Link>
           </li>
-          <li className="font-bold text-4xl text-right transition-colors text-white hover:text-white/75">
+          <li className="font-bold text-4xl text-right transition-all hover:-translate-y-1 bg-white p-2 rounded-2xl w-fit hover:bg-white/80">
             <Link href="/contact">Get in Touch</Link>
           </li>
         </ul>
