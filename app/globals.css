@@ -24,6 +24,12 @@ body {
   min-height: 100vh;
 }
 
+@layer utilities {
+  .font-condensed {
+    font-stretch: condensed;
+  }
+}
+
 @layer components {
   .porfolioBento {
     @apply grid gap-4;
@@ -39,6 +45,18 @@ body {
     @media (min-width: 1024px) {
       grid-template-columns: 1fr 1fr;
       grid-template-rows: fit-content fit-content;
+    }
+  }
+
+  .portfolioPreviewBento {
+    @apply grid gap-4;
+
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, fit-content);
+
+    @media (min-width: 1024px) {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: min-content 1fr min-content;
     }
   }
 

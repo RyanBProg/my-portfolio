@@ -80,9 +80,6 @@ export default function NavMenu() {
           <li className="font-bold text-4xl text-right transition-all hover:-translate-y-1 bg-teal-400 p-2 rounded-2xl w-fit hover:bg-teal-300">
             <Link href="/">Home</Link>
           </li>
-          <li className="font-bold text-4xl text-right transition-all hover:-translate-y-1 bg-yellow-400 p-2 rounded-2xl w-fit hover:bg-yellow-300">
-            <Link href="/about">About Me</Link>
-          </li>
           <li className="font-bold text-4xl text-right transition-all hover:-translate-y-1 bg-red-400 p-2 rounded-2xl w-fit hover:bg-red-300">
             <Link href="/portfolio">Portfolio</Link>
           </li>
