@@ -14,7 +14,7 @@ type TFormInputs = {
   message: string;
 };
 
-export default function Home() {
+export default function Contact() {
   const {
     register,
     handleSubmit,
@@ -27,19 +27,20 @@ export default function Home() {
 
   return (
     <>
-      <div className="flex my-4 gap-4 flex-col lg:flex-row">
-        <div className="bg-teal-400 flex-1 flex flex-col justify-center rounded-3xl p-3 xs:p-10">
-          <h1 className="text-black text-3xl sm:text-5xl lg:text-[5rem] font-bold mb-4">
-            Let&apos;s Collaborate!
-          </h1>
-          <p className="text-neutral-600">
+      <div className="flex lg:items-center my-20 lg:my-40 gap-4 lg:gap-10 flex-col lg:flex-row">
+        <div className="flex-1 mb-20 lg:mb-0">
+          <h1 className="sectionTitle">Let's Collaborate!</h1>
+          <p className="text-neutral-400 max-w-[600px]">
             I'm always excited to connect with others who are as passionate
             about technology and building new projects as I am. If you think we
-            can build something great together, don&apos;t hesitate to reach
-            out.
+            can{" "}
+            <span className="text-white font-semibold">
+              build something great together
+            </span>
+            , don't hesitate to reach out.
           </p>
         </div>
-        <div className="bg-black flex-1 rounded-3xl p-3 xs:p-10">
+        <div className="flex-1">
           <form
             noValidate
             className="flex flex-col gap-4"
@@ -121,7 +122,7 @@ export default function Home() {
           </form>
         </div>
       </div>
-      <div className="bg-blue-400 mb-4 flex flex-col sm:flex-row justify-between items-start gap-4 sm:items-center rounded-3xl p-3 xs:p-10">
+      <div className="bg-blue-400 mb-4 flex flex-col sm:flex-row justify-between items-start gap-4 sm:items-center rounded-3xl p-4 sm:p-6">
         <h2 className="text-black text-3xl sm:text-5xl font-bold">Socials</h2>
         <div className="flex gap-4">
           <button className="bg-white/30 rounded-full max-w-12 max-h-12 shadow-lg transition-all hover:-translate-y-1 hover:bg-white/75">

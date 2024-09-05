@@ -1,8 +1,8 @@
 "use client";
 
 import Image from "next/image";
-import menuIcon from "../../public/icons/menu.png";
-import closeIcon from "../../public/icons/close.png";
+import menuIcon from "../../../public/icons/menu.png";
+import closeIcon from "../../../public/icons/close.png";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { usePathname } from "next/navigation";
@@ -77,14 +77,27 @@ export default function NavMenu() {
           <Image src={closeIcon} alt="" className="size-6" />
         </button>
         <ul className="flex flex-col gap-4 items-end">
-          <li className="font-bold text-4xl text-right transition-all hover:-translate-y-1 bg-teal-400 p-2 rounded-2xl w-fit hover:bg-teal-300">
+          <li className="font-bold text-4xl text-right transition-all hover:-translate-y-1 text-neutral-300 bg-neutral-800 p-2 rounded-2xl w-fit hover:brightness-110">
             <Link href="/">Home</Link>
           </li>
-          <li className="font-bold text-4xl text-right transition-all hover:-translate-y-1 bg-red-400 p-2 rounded-2xl w-fit hover:bg-red-300">
-            <Link href="/portfolio">Portfolio</Link>
-          </li>
-          <li className="font-bold text-4xl text-right transition-all hover:-translate-y-1 bg-white p-2 rounded-2xl w-fit hover:bg-white/80">
+          <li className="font-bold text-4xl text-right transition-all hover:-translate-y-1 text-neutral-300 bg-neutral-800 p-2 rounded-2xl w-fit hover:brightness-110">
             <Link href="/contact">Get in Touch</Link>
+          </li>
+          <span className="text-neutral-600 text-xl font-bold boreder-none mt-10 -mb-3">
+            Portfolio Projects
+          </span>
+          <hr className="bg-neutral-600 w-full h-[2px] border-none mb-4" />
+          <li className="font-bold text-4xl text-right transition-all hover:-translate-y-1 bg-red-300 p-2 rounded-2xl w-fit hover:brightness-110">
+            <Link href="/portfolio">Project 1</Link>
+          </li>
+          <li className="font-bold text-4xl text-right transition-all hover:-translate-y-1 text-neutral-300 bg-neutral-800 p-2 rounded-2xl w-fit hover:brightness-110">
+            <Link href="/portfolio">Project 2</Link>
+          </li>
+          <li className="font-bold text-4xl text-right transition-all hover:-translate-y-1 bg-red-400 p-2 rounded-2xl w-fit hover:brightness-110">
+            <Link href="/portfolio">Project 3</Link>
+          </li>
+          <li className="font-bold text-4xl text-right transition-all hover:-translate-y-1 bg-pink-500 p-2 rounded-2xl w-fit hover:brightness-110">
+            <Link href="/portfolio">Project 4</Link>
           </li>
         </ul>
       </nav>

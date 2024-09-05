@@ -21,23 +21,25 @@ export default function PortfolioPreviewBento({
 }: Props) {
   return (
     <div
-      className={`${bgCol} bentoSlide mb-4 flex flex-col sm:flex-row justify-between items-start gap-4 sm:items-center rounded-3xl p-3 xs:p-10`}>
+      className={`${bgCol} w-[240px] sm:w-[300px] inline-block bentoSlide rounded-3xl p-3 sm:p-6`}>
       <div className="portfolioPreviewBento">
-        <div className="rounded-xl overflow-clip max-w-[350px] lg:row-span-3">
-          <Image src={image} alt="" className="object-cover h-full" />
+        <div className="rounded-xl overflow-clip">
+          <Image src={image} alt="" className="object-cover w-full" />
         </div>
-        <div className="flex gap-1 h-min mt-5 lg:mt-0">
+        <div className="flex flex-wrap gap-1">
           {tech.map((name) => {
             return (
-              <span className="bg-black/30 drop-shadow-lg px-2 py-1 text-sm rounded-full text-white">
+              <span
+                key={name}
+                className="bg-black drop-shadow-lg px-2 py-1 text-sm rounded-full text-white">
                 {name}
               </span>
             );
           })}
         </div>
         {children}
-        <Link href={link}>
-          <span className="bg-black text-white font-semibold px-6 py-3 w-fit rounded-full">
+        <Link className="mt-4" href={link}>
+          <span className="bg-black text-white inline-block font-semibold px-6 py-3 w-fit rounded-full transition-all hover:-translate-y-1 hover:bg-neutral-900">
             View Project
           </span>
         </Link>

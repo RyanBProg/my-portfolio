@@ -1,57 +1,59 @@
 "use client";
 
-import BentoLarge from "../components/BentoLarge";
 import Image from "next/image";
 import Link from "next/link";
-import { TPortfolioData } from "../utils/types";
-import { portfolioData } from "../utils/portfolioData";
+import TextBento from "../_components/TextBento";
+import typescriptIcon from "../../public/icons/typescript.png";
+import reactIcon from "../../public/icons/atom.png";
+import cssIcon from "../../public/icons/css.png";
+import nodeIcon from "../../public/icons/node-js.png";
+import urlShorty from "../../public/images/url-shorty.png";
 
-export default function Home() {
+const imageList = [urlShorty, urlShorty, urlShorty, urlShorty];
+const stackList = [
+  { title: "React", icon: reactIcon },
+  { title: "Typescript", icon: typescriptIcon },
+  { title: "Tailwind", icon: cssIcon },
+  { title: "Node js", icon: nodeIcon },
+  { title: "Tailwind", icon: cssIcon },
+  { title: "Node js", icon: nodeIcon },
+];
+
+export default function Portfolio() {
   return (
     <>
-      <BentoLarge className="bg-white/10 col-span-2 flex items-center mt-4">
-        <h1 className="text-white text-2xl xs:text-4xl font-bold">
-          My Portfolio
-        </h1>
-      </BentoLarge>
-      {portfolioData.map((data) => (
-        <PortfolioBento data={data} />
-      ))}
+      <div className="mt-20 mb-4 flex justify-between items-center">
+        <h1 className="sectionTitle">URL Shorty</h1>
+        <Link href="/">
+          <span className="inline-block bg-red-400 rounded-full w-full px-4 py-2 text-lg font-semibold shadow-lg ring-1 ring-black/5 h-fit transition-all hover:-translate-y-1 hover:brightness-110">
+            Visit
+          </span>
+        </Link>
+      </div>
+
+      <PortfolioBento />
     </>
   );
 }
 
-type PortfolioBentoProps = {
-  data: TPortfolioData;
-};
-
-function PortfolioBento({ data }: PortfolioBentoProps) {
+function PortfolioBento() {
   return (
-    <section className="my-4 porfolioBento">
-      <BentoLarge
-        className={`max-h-[400px] lg:max-h-full lg:row-span-2 bg-${data.color}-400 flex flex-col gap-4`}>
-        <div className="flex justify-between">
-          <p className="text-2xl xs:text-3xl font-bold">{data.title}</p>
-          <Link href={data.link}>
-            <div className="bg-white/75 rounded-full w-full px-4 py-2 font-semibold shadow-lg ring-1 ring-black/5 h-fit transition-colors hover:bg-white/40">
-              <p>Visit</p>
-            </div>
-          </Link>
-        </div>
-        <div className="flex overflow-x-scroll gap-4 pb-4">
-          {data.images.map((image) => (
+    <section className="porfolioBento mb-20">
+      <div className="max-h-[400px] md:col-span-2 flex flex-col gap-4">
+        <div className="flex overflow-x-scroll scroll-container gap-4 pb-4">
+          {imageList.map((image) => (
             <Image
               src={image}
               alt=""
-              className="object-cover rounded-xl w-[280px] lg:w-[380px]"
+              className="object-cover rounded-xl w-[255px] xs:w-[380px] lg:w-[450px]"
             />
           ))}
         </div>
-      </BentoLarge>
-      <BentoLarge className="bg-white/10 text-white">
-        <h2 className="text-2xl font-bold mb-4">Tech Stack</h2>
-        <ul className="text-white/80 font-medium grid xs:grid-cols-2 xs:grid-rows-3 md:grid-cols-1 md:grid-rows-6 lg:grid-cols-2 lg:grid-rows-3 gap-3 text-[1.1rem]">
-          {data.stack.map((badge) => (
+      </div>
+      <TextBento bgCol="bg-neutral-800">
+        <h2 className="text-2xl font-bold mb-4 text-white">Tech Stack</h2>
+        <ul className="text-neutral-300 font-medium grid xs:grid-cols-2 xs:grid-rows-3 md:grid-cols-1 md:grid-rows-6 lg:grid-cols-2 lg:grid-rows-3 gap-y-4 gap-x-6 text-[1.1rem]">
+          {stackList.map((badge) => (
             <li>
               <Image
                 src={badge.icon}
@@ -62,11 +64,23 @@ function PortfolioBento({ data }: PortfolioBentoProps) {
             </li>
           ))}
         </ul>
-      </BentoLarge>
-      <BentoLarge
-        className={`md:col-span-2 lg:col-span-1 bg-${data.color}-400 relative`}>
-        <p>{data.description}</p>
-      </BentoLarge>
+      </TextBento>
+      <div className="text-neutral-400 relative">
+        <p className="mb-4">
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium
+          libero ea recusandae, maxime distinctio, consectetur illo nemo
+          aliquam, vel facilis aliquid atque cumque debitis quod quo ut eveniet.
+          Ipsa nemo laborum vitae amet! Quaerat deleniti, nemo perspiciatis
+          mollitia doloribus quia eos quos aut soluta quis nihil. Consequuntur
+          iste quasi earum.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus
+          praesentium eveniet ratione ullam nemo perspiciatis architecto sit
+          cupiditate corporis, laborum mollitia, fugiat eos nam numquam sapiente
+          vitae, obcaecati facere ab!
+        </p>
+      </div>
     </section>
   );
 }

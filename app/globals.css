@@ -2,49 +2,36 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  /* colors */
-  --bg-color: rgb(18, 18, 18);
-  --light-black: rgb(43, 41, 43);
-  --screen-xs: 480px;
-  --screen-sm: 640px;
-  --screen-lg: 1024px;
-
-  /* gradients */
-  --gradient-header: linear-gradient(
-    109.6deg,
-    rgb(120, 33, 253) 11.2%,
-    rgb(103, 26, 217) 100.2%
-  );
-}
-
 body {
-  padding: 20px;
-  background-color: var(--bg-color);
-  min-height: 100vh;
-}
-
-@layer utilities {
-  .font-condensed {
-    font-stretch: condensed;
-  }
+  @apply p-5 bg-black h-full;
 }
 
 @layer components {
+  .sectionTitle {
+    @apply text-white text-[2.5rem] sm:text-[4rem] font-bold tracking-wide;
+  }
+
+  .dashboardBento {
+    @apply grid gap-4;
+
+    grid-template-columns: 1fr;
+    grid-template-rows: 300px 80px 1fr;
+
+    @media (min-width: 768px) {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: fit-content(100px) 1fr;
+    }
+  }
+
   .porfolioBento {
     @apply grid gap-4;
 
     grid-template-columns: 1fr;
-    grid-template-rows: fit-content fit-content fit-content;
+    grid-template-rows: 1fr min-content min-content;
 
     @media (min-width: 768px) {
-      grid-template-columns: 1fr fit-content;
-      grid-template-rows: fit-content 1fr;
-    }
-
-    @media (min-width: 1024px) {
-      grid-template-columns: 1fr 1fr;
-      grid-template-rows: fit-content fit-content;
+      grid-template-columns: max-content 1fr;
+      grid-template-rows: min-content 1fr;
     }
   }
 
@@ -53,28 +40,10 @@ body {
 
     grid-template-columns: 1fr;
     grid-template-rows: repeat(3, fit-content);
-
-    @media (min-width: 1024px) {
-      grid-template-columns: repeat(2, 1fr);
-      grid-template-rows: min-content 1fr min-content;
-    }
   }
 
-  .aboutBento {
-    @apply grid gap-4;
-
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(12, fit-content);
-
-    @media (min-width: 768px) {
-      grid-template-columns: repeat(6, 1fr);
-      grid-template-rows: repeat(5, fit-content);
-    }
-
-    @media (min-width: 1024px) {
-      grid-template-columns: repeat(6, 1fr);
-      grid-template-rows: repeat(5, fit-content);
-    }
+  .scroll-container {
+    scrollbar-color: white black;
   }
 
   @keyframes slide-right {
