@@ -23,29 +23,29 @@ export default function AboutSection() {
           My programming journey{" "}
           <span className="text-white font-semibold">started in 2022</span>,
           when I began writing small scripts for our CAD software, I discovered
-          how much I enjoyed coding and I've been hooked ever since. What
+          how much I enjoyed coding and I&apos;ve been hooked ever since. What
           started as a few small scripts turned into a whole suite of tools that
-          helped streamline our work, and that's when I realized it was time for
-          a career change.
+          helped streamline our work, and that&apos;s when I realized it was
+          time for a career change.
         </p>
         <p className="text-neutral-400 mb-4">
           I dove headfirst into web development, spending my evenings (and
           plenty of late nights!) learning everything I could. Fast forward to
-          today, and I've earned a few web development qualifications and{" "}
+          today, and I&apos;ve earned a few web development qualifications and{" "}
           <span className="text-white font-semibold">
             built several projects
           </span>{" "}
-          that I'm really proud of. For the previous 10 years, I worked as a
-          mechanical design engineer in the world of special-purpose machinery
+          that I&apos;m really proud of. For the previous 10 years, I worked as
+          a mechanical design engineer in the world of special-purpose machinery
           and food processing.
         </p>
         <p className="text-neutral-400">
           Now, I get to combine my{" "}
           <span className="text-white font-semibold">engineering mindset</span>{" "}
           with my passion for coding to build responsive, scalable apps that
-          solve real-world problems. Whether it's crafting a sleek front-end or
-          getting into the nitty-gritty of the back-end, I love what I do—and
-          I'm always up for the next challenge.
+          solve real-world problems. Whether it&apos;s crafting a sleek
+          front-end or getting into the nitty-gritty of the back-end, I love
+          what I do—and I&apos;m always up for the next challenge.
         </p>
       </div>
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">

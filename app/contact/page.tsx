@@ -29,15 +29,15 @@ export default function Contact() {
     <>
       <div className="flex lg:items-center my-20 lg:my-40 gap-4 lg:gap-10 flex-col lg:flex-row">
         <div className="flex-1 mb-20 lg:mb-0">
-          <h1 className="sectionTitle">Let's Collaborate!</h1>
+          <h1 className="sectionTitle">Let&apos;s Collaborate!</h1>
           <p className="text-neutral-400 max-w-[600px]">
-            I'm always excited to connect with others who are as passionate
+            I&apos;m always excited to connect with others who are as passionate
             about technology and building new projects as I am. If you think we
             can{" "}
             <span className="text-white font-semibold">
               build something great together
             </span>
-            , don't hesitate to reach out.
+            , don&apos;t hesitate to reach out.
           </p>
         </div>
         <div className="flex-1">

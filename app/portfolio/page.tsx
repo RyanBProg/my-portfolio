@@ -54,7 +54,7 @@ function PortfolioBento() {
         <h2 className="text-2xl font-bold mb-4 text-white">Tech Stack</h2>
         <ul className="text-neutral-300 font-medium grid xs:grid-cols-2 xs:grid-rows-3 md:grid-cols-1 md:grid-rows-6 lg:grid-cols-2 lg:grid-rows-3 gap-y-4 gap-x-6 text-[1.1rem]">
           {stackList.map((badge) => (
-            <li>
+            <li key={badge.title}>
               <Image
                 src={badge.icon}
                 alt=""

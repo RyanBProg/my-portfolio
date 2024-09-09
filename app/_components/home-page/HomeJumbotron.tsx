@@ -7,7 +7,7 @@ export default function HomeJumbotron() {
   return (
     <div className="my-64">
       <p className="text-white text-4xl sm:text-5xl font-semibold mb-4 tracking-wide">
-        <span className="mr-2">&#128075;</span> Hi, I'm Ryan
+        <span className="mr-2">&#128075;</span> Hi, I&apos;m Ryan
       </p>
       <h1 className="text-neutral-400 text-xl mb-6">
         A passionate{" "}
