@@ -10,8 +10,8 @@ import { usePathname } from "next/navigation";
 export default function NavMenu() {
   const [menuOpen, setMenuOpen] = useState(false);
   const pathname = usePathname();
-  const navRef = useRef(null);
-  const closeMenuBtn = useRef(null);
+  const navRef = useRef<HTMLDivElement>(null);
+  const closeMenuBtn = useRef<HTMLButtonElement>(null);
 
   // auto focus first item in nav menu
   useEffect(() => {
@@ -25,14 +25,11 @@ export default function NavMenu() {
   const handleClickOutsideMenu = (event: MouseEvent) => {
     if (
       closeMenuBtn.current &&
-      (closeMenuBtn.current as HTMLElement).contains(event.target as Node)
+      closeMenuBtn.current.contains(event.target as Node)
     ) {
       return;
     }
-    if (
-      navRef.current &&
-      !(navRef.current as HTMLElement).contains(event.target as Node)
-    ) {
+    if (navRef.current && !navRef.current.contains(event.target as Node)) {
       setMenuOpen(false);
     }
   };
