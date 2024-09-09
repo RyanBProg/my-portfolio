@@ -41,8 +41,9 @@ function PortfolioBento() {
     <section className="porfolioBento mb-20">
       <div className="max-h-[400px] md:col-span-2 flex flex-col gap-4">
         <div className="flex overflow-x-scroll scroll-container gap-4 pb-4">
-          {imageList.map((image) => (
+          {imageList.map((image, index) => (
             <Image
+              key={index}
               src={image}
               alt=""
               className="object-cover rounded-xl w-[255px] xs:w-[380px] lg:w-[450px]"
